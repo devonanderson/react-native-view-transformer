@@ -36,7 +36,7 @@ function isValidTransform(transform) {
   return false;
 }
 
-export function fitCenterRect(contentAspectRatio, containerRect:Rect) {
+export function fitCenterRect(contentAspectRatio, containerRect) {
   let w = containerRect.width();
   let h = containerRect.height();
   let viewAspectRatio = w / h;
@@ -63,7 +63,7 @@ export function fitCenterRect(contentAspectRatio, containerRect:Rect) {
  * @param transform
  * @returns {*}
  */
-export function transformedRect(rect:Rect, transform:Transform) {
+export function transformedRect(rect, transform) {
   if (!isValidRect(rect)) {
     throw new Error('transformedRect...invalid rect');
   }
@@ -127,7 +127,7 @@ export function getTransform(fromRect, toRect) {
  * @param viewPortRect
  * @returns {*|{line, column}|{column, line}|{x}}
  */
-export function alignedRect(rect:Rect, viewPortRect:Rect) {
+export function alignedRect(rect, viewPortRect) {
   let dx = 0, dy = 0;
 
   if (rect.width() > viewPortRect.width()) {
